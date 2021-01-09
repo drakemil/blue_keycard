@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 87758566}
   - component: {fileID: 87758565}
   m_Layer: 0
-  m_Name: Cube (5)
+  m_Name: ronald_ronny
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -965,7 +965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5704b88c88507143a80db6a27fe26d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 100
+  mouseSensitivity: 300
   playerBody: {fileID: 1877821676}
   Camera: {fileID: 1219289906}
 --- !u!81 &1219289908
@@ -1644,8 +1644,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1877821675}
-  speed: 12
-  grav: -9.81
+  speed: 25
+  grav: -60
   jumpheight: 4.2
   groundCheck: {fileID: 2065554224}
   groundDistance: 0.4
@@ -1665,7 +1665,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rate: 0.25
-  range: 50
+  range: 3
+  fpsCam: {fileID: 1219289909}
 --- !u!1 &1957305719
 GameObject:
   m_ObjectHideFlags: 0
