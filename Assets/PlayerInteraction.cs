@@ -10,6 +10,7 @@ public class PlayerInteraction : MonoBehaviour
 	public Camera fpsCam;                                                // Holds a reference to the first person camera
   private WaitForSeconds shotDuration = new WaitForSeconds(0.07f);
 	private float nextFire;
+	public CallInteract Script;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +21,7 @@ public class PlayerInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && Time.time > nextFire)
+        if (Input.GetButtonDown("Interact") && Time.time > nextFire)
         {
 			nextFire = Time.time + rate;
 			Vector3 rayOrigin = fpsCam.ViewportToWorldPoint (new Vector3(0.5f, 0.5f, 0.0f));
@@ -30,7 +31,12 @@ public class PlayerInteraction : MonoBehaviour
 			{
 				//print("Found an object - distance: " + hit.distance);
 				//print(hit.collider.name);
-				hit.transform.position = hit.transform.position + new Vector3(1000f,0f,0f);
+				//hit.transform.position = hit.transform.position + new Vector3(1000f,0f,0f);
+				Script = hit.collider.GetComponent<CallInteract>();
+				if (Script != null)
+					{
+						Script.runInteraction();
+					}
 			}
 		}
     }
