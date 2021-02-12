@@ -37,7 +37,7 @@ public class interact_door : MonoBehaviour
         case (0): // closed
             moveVector = new Vector3(0f,0f,0f);
             break;
-        case (2): //closing
+        case (2): //open
             moveVector = new Vector3(0f,0f,0f);
             break;
       }
@@ -47,7 +47,7 @@ public class interact_door : MonoBehaviour
       //check open/close
       if (transform.position.y >= ymax)
       {
-        transform.position = new Vector3 (transform.position.x, yinit, transform.position.z);
+        transform.position = new Vector3 (transform.position.x, ymax, transform.position.z);
         openstate = 2;
       }
       else if (transform.position.y <= yinit)
