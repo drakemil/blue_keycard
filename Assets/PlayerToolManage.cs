@@ -25,7 +25,10 @@ public class PlayerToolManage : MonoBehaviour
         if (nexttool==activetool){
           //they ARE the same tool...
             if(!(swingtool)){
-              //check clix
+              if (Input.GetButton("Fire1")) {
+				  //print("grifin firing");
+				  swingtool=true;
+			  }
             }
         }else{
           //they ARE NOT the same tool...
